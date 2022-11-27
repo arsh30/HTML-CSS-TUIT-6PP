@@ -1,0 +1,103 @@
+/* 
+CSS SELECTORS -> NOTE -> Jbhi HTML component bnae make sure ki har component ko 
+                id and class dedo, taki easily fetch kr paye for styling and javascript
+
+1) Element selector 
+    h1 {
+        color:red;
+    }
+
+2) Universal Selector (*) -> means puri HTML pr apply honge
+ (*){
+      backgroundColor:black; // sabka color black hojega                     
+   }
+
+   Note -> AGR SAME PROPERTY DI HAI 2 3 ELEMENT KO , TOH JO NICHE WALI PROPERTY HAI 
+   VO MANI JAEGI , so jo baad me hota h uski importance jyda hoti hai
+
+3) CLASS SELECTOR -> (.className) -> used to give color to muliple elements and 1 elem 
+   ko more than 1 class de skte hai using space
+eg: .firstDiv {
+                color:red;        
+              }
+
+    NOTE -> Agr muliple element ko sme class di hai, but ham chahte hai ki sirf isse 
+    class ka color yeh ho 
+    we write: 
+    eg: .firstDiv{
+        color:red !important; // means yehi rhega ab
+    } 
+
+4) ID SELECTOR -> (#idName) -> It is unique in whole html 
+    eg: $firstDiv{
+        color:red; 
+        color:initial; // suppose agr hum bhul gye ki pehle konse color ki di thi
+        to isse voi aajegi
+    }
+  
+    eg2:  a {
+    Element selector -> jitne bhi a tag hai sabka hojega 
+    color: black;
+    }
+
+     WE WANT KI jo youtube wala hai sirf uska change ho, to Id dege usko 
+    1st way
+    #yt {
+    color: red;
+    }
+
+    2nd way Attribute selector
+
+5)   ATTRIBUTE SELECTOR
+    a[href="instagram"]{
+        color:red;
+    }
+
+    agr mulitple element togetherly change krne ho, means sabke upr same property lgti 
+    hai, eg: h1 span div in 3 ka background color orange krdo
+    h1,
+    span,
+    div {
+    background-color: orange;
+    }
+
+
+6) CHILD SELECTOR ( > ) -> It access the direct child
+[grandchild ko NHI select krta]
+
+span > p {
+  color: orange;
+}
+
+
+7) DESCENDENT SELECTOR () ->
+EG: li li { // means li iske andr jitne bhi li tags hai sabka color ye hoje
+    color: orange;
+};
+
+
+8) ADJACENT SIBLING SELECTOR ( + ) -> means jo sare ikdum sth sth jude hai. 
+Eg: h1 ke sabse paas konsa hai 
+
+h1 + p { // h1 ke just sth jo p hai, sirf uska color yeh hoga
+color:red;
+}
+
+9) GENERAL SIBLING SELECTOR (~) -> eg: h1 tag iske sare p tags jo sibling hai 
+unko agr select krna ho 
+
+eg:  <h1>WELCOME TO CSS LECTURE</h1>
+    <p>BY ARSHDEEP SINGH</p>
+    <p>hjhb</p>
+    <p>arsh</p>
+    <p>arsh</p>
+    <p>arsh</p>
+    <p>arsh</p>
+    <p>arsh</p>
+
+    -> h1 ~ p {
+  background-color: orange; // sare change krdega, and in 
+  adjacent wala jo sabse nearest hota hai usko hi krta hai
+  h
+}
+*/
