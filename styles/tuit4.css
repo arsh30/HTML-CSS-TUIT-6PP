@@ -1,0 +1,41 @@
+/*
+1) CSS - Cascading Style Sheet use for styling the Html 
+     
+    selector {
+         (property) : (value);
+    }
+
+    Eg: div {
+        color:red;
+    }
+
+2.1) INLINE CSS -> means Html ke sth hi css likhte hai. - [TRY TO AVOID THIS]
+    eg:  <h1 style="color: blue">WELCOME TO CSS TUIT</h1>
+
+
+2.2) INTERNAL CSS -> means HeadTag ke andr hi CSS apply krte hai using style Tag 
+eg:   <style>
+      h1 {
+         H1 is a selector 
+        background-color: #976e2236;
+        Jb color pr hover krre -> agr sabse upr click krege to hum change bhi kar skte hai
+          jb color box open hota - toh left wala is opacity - means kitna light rakhna hai 
+      }
+      p {
+        color: blueviolet;
+      }
+    </style>
+
+2.3) EXTERNAL CSS -> make a seperate css file for styling and link that css file to a HTML 
+                    [NOTE - mostly used this]
+
+                    Eg: is below
+
+*/
+
+h1 {
+  color: blue;
+}
+p {
+  background-color: orange;
+}
