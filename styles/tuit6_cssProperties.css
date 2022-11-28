@@ -1,0 +1,77 @@
+/*
+1) to change text color -> color:red, [color pr agr click kro or left wala scroller hota 
+                                    ie opacity jitni kam ho utna acha]
+2) to changebackgroundColor -> background-color: black;
+
+
+FONT REALTED PROPERTIES ->
+
+1)  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+2)  font-size: [mydefault medium hoti hai]
+3) font-style: italic, normal
+4) font-weight: 100 - 900 [agr 900 denge to boht jyda bold hojega]
+5) text-align -> left,center,right [ default value is left - kyuki udr se likhte hai hum]
+            - justify -> isse agr koi word 1 line me nhi aa skta toh left or right se
+                        space fill krta hai, half word 1 line and half next line me 
+
+6) text-transform - capitalise -> [har word ka first letter capital hoga bs]
+                  - lowercase -> [sabkuch lowercase me hojega] 
+                  - uppercase -> [sabkuch uppercase me hojega] 
+
+7) text-decoration: underline -> [text ke niche underline aajegi]
+                  : overline -> [isse upr line aajegi]
+                  : line-through -> [bheech me se line aajegi like cut] 
+                  : none -> sab kuch htajega
+
+8) text-indent: 30% -> pure page me jo bhi paragraph hai unki first line 30% space dekkr 
+                      start hoege baki lines normally chlegi
+                      
+9) line-height:20px; -> jo har line hai unke bheech me 20px ka gap aajega
+10) letter-spacing:20px; -> har alphabet ke bheech me space aajyega
+11) word-spacing:20px -> har word ke bheech me space aajega
+12) text-shadow: 0 (x cordinate) 0(ycordinate) 5px(kitna blue chaiye) black;
+                - [x , y coordinate ki trf shadow move hojegi] means 
+                x axis ki trf shift hojegi, agr 10px dege to right side move hojegi
+                and -10px to left side move hojegi
+
+13) background-image:url('image destination folder');
+                    - [isse background image repeat hogi] 
+
+14) background-repeat:no-repeat 
+                     :repeat-x
+                     :repeat-y [y axis me repeat hogi]
+
+15) background-attachment: scroll 
+                         : fixed -> 1 jgh fixed hojegi image
+                    
+16) background-size: cover; [pure page pr stretch hojegi image]
+
+17) background-position: 10px(x-axis) 0(y-axis)
+                       : top
+                       : left
+                       : center 
+                       : 25% 75% [25 is x axis, 75 is y axis]
+                       : bottom 50px right 100px [botoom se 50px uper hoja, right se 100
+                                                pixels ka gap lelegi]
+
+
+18) Overflow: hidden -> [ Suppose agr kisi ki height 20px di hai 
+                       and content agr overflow hora hai, to we 
+                       this, so hidden se jo bhi overflow hora 
+                      hoega vo show nhi hoga]
+
+            :scroll -> [scroll bar aajega]  
+            : auto -> agr content overflow hoga toh scroll bar 
+              ajega [best is auto]
+                
+*/
+p {
+  color: red;
+  background-color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: medium;
+  font-weight: 900;
+
+  text-align: center;
+  text-transform: uppercase;
+}

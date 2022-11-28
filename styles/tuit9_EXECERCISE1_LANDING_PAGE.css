@@ -1,0 +1,68 @@
+/* NOTE -> AS A BEGINNER JO BHI ELEM BNAEGE  START HOTE HI BORDER DEDO */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*isse hoga ki jo bhi padding dege vo sab usi height me  include krlega */
+  scroll-behavior: smooth;
+}
+header {
+  /* border: 2px solid red; */
+  /* height: 100px; */
+  background-color: crimson;
+  padding: 50px;
+}
+
+header > a {
+  color: white;
+  text-decoration: none;
+  margin: 0px 20px;
+  /*TOP BOTTOM, LEFT RIGHT */
+}
+
+section {
+  /* border: 2px solid black; */
+  height: 500px;
+  width: 1000px;
+  margin: auto;
+  /* NOTE - Margin:auto kuch kuch jagah kaam nahi krti, bcoz requirement is 
+  1st block element hona chaiye, 2nd width set honi chaiye
+  3rd then margin:auto krege to center me hojega
+  */
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(164, 55, 121, 0.692),
+    rgba(206, 204, 93, 0.85)
+  );
+  /* background-image -> gradient means mixture of 2,3 colors
+  to bottom -> jo bhi flow ho vo niche ki trf jana chaiye
+  
+  */
+
+  text-align: center;
+  padding: 20px;
+}
+
+section > h1 {
+  font-size: 40px;
+}
+section > img {
+  width: 400px;
+  border-radius: 50px;
+}
+footer {
+  /* border: 2px solid black; */
+  /* height: 100px; */
+  width: 1000px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.689);
+  text-align: center;
+  padding: 50px;
+}
+
+footer > a {
+  color: white;
+  text-decoration: none;
+}

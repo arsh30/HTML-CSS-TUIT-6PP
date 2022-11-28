@@ -1,0 +1,97 @@
+/* css box model and margin and padding */
+
+/* 
+1)  list-style-type: circle;
+                   : decimal - number aajege
+                   : lower alpha -> (a,b,c,d)
+                   : sqaure -> sqaure bueelt points aajege
+                   : none [very usefull] in navigation
+
+2) list-style-position: inside; // thoda andr ki trf shift hojegi 
+                      : outside // bhar ki trf shift hojegi 
+                      
+
+3) list-style-image: url(path or copy_image_address)
+
+SHORTHAND PROPERTY : 
+list-style: circle(list-style-type) inside(list-style-position) url(optional); 
+or url bhi de skte hai 
+
+--------------------------------
+
+MODEL BOX [VVVV IMP]
+
+Keep things in mind ->
+
+1) Jox boxhota h inpsect krne pr -> jo bhi BORDER hoga vo ELEMENT hoga hmara
+2) jo bhi CONTENT wala part hai vo BLUE WALE BOX me aayega
+3) green space jo hai - ie PADDING
+4) border ke bhar jo hai vo MARGIN
+
+
+In OTHER WORDS-> 
+ Koi bhi element bnate hai html me, vo Isi form me bnta hai
+
+ 1)  content -> andr content hoga
+ 2)  uske baad padding hogi -> Means uss element ke andr ka free space
+ 3)  Border -> Border hoga kuch uss element ka
+ 4)  Margin -> jo element ke bhaar ki space hoti hai
+
+ NOTE -> Padding and Margin dene se overall height increase hoti hai 
+ total height -> margin + border + padding + content 
+
+ .small {
+  border: 5px solid black; Border - > 4 tarf border aajega  
+  width: 200px;
+  
+  BORDER THA USKE ANDR CONTENT THA 
+
+  padding: 20px;  element or content ke andr ka FREE SPACE ajega 
+  margin: 20px; Element or Border ke bhar wale space ko bolte hai ie MARGIN 
+  
+  NOTE -> Margin wala space -> CONTENT KA NAHI HOTA 
+  -> MARGIN yeh jo hota hai hmara element ke bhar ka space hota hai 
+
+  SHORT HANDS PROPERTY ->
+
+  margin shortHand Prop -> margin:20px -> charo taraf se 20px lelega 
+  margin shortHand Prop -> margin:20px 50px -> 20px yeh jo hai - TOP bottom se and 
+                            50px ye left and right 
+    
+  margin: shortHand prop -> top right bottom left; 0 0  0 0 
+  NOTE -> Body have some  by default Margin and Padding 
+
+
+  PADDING SHORTHAND PROPERTY -> padding:20px -> charo taraf se 20px lelega 
+                                padding :20px 50px -> 20px yeh jo hai - TOP bottom se and 
+                                50px ye left and right 
+    Padding: shortHand prop -> top right bottom left; 0 0  0 0 
+
+   IMP - NOTE-> AGR HUM HEIGHT CHAHTE HAI KI SAME RHE TO BOX-SIZING: BORDER BOX 
+               Yeh denge toh jo hum height bolege utni hi rhegi 
+
+
+
+
+
+
+
+
+
+
+
+*/
+/*
+body {
+  background-color: rgb(153, 197, 197);
+  font-size: 30px;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: circle;
+  list-style-image: url("http://media/examples/rocket.svg");
+}
+*/
+
+

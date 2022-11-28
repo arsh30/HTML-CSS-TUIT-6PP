@@ -1,0 +1,39 @@
+/* 
+UNITS
+
+1) Relative -> means no fixed value -> eg: 20% paise do, 20% fixed nhi hai kitne ka 20%
+              100 , ya 20 ka 20%, 
+              <-MOSTLY USED THIS->
+
+2) Absolute -> means 20 rupee do, fixed hai, means phone me dekhege ya kahin bhi dekhe
+                fixed rhegi
+
+---------
+
+A) RELATIVE UNITS
+cm
+1) percent -> 100% -> means jo bhi iska parent ka font size hai uska 100%
+                    eg: body, uska koi font nhi dia to default 16px hai
+
+2) em -> means 200% [2 guna] , 1em = 100%
+        ye bhi parent element ke pass jaata hai, uske size ka 2em leta hai
+
+3) rem -> 2rem:  root element, means HTML, by default html, html ka 16px 
+                    so, 16 * 2 => 32px
+
+         --------- MOSTLY USED THIS-----------
+
+4) vw -> 10vw; -> means jo bhi width hai screen ki uska 10 percent
+5) vh -> 10vh; -> means viewport height, jo bhi height hai screen ki uska 10 percent
+6) vmin -> 10vmin; -> means ye check krega ki height or width kya hai screen ki dono me
+                      se jo min hoga, vo ye lelega
+
+7) vmax -> 10vmax -> means height or width me se jo bhi jyda hai, uska 10percent lelega
+
+
+
+B) FIXED UNITS ->
+
+1) px ->20px -> chahe phone me dekhe ya laptop me fixed rhega
+2) cm
+*/
