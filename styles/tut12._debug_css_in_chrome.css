@@ -1,0 +1,29 @@
+/*
+Eg: Agr kuch problem usko thik krna hai, agr chrome me h editing kr ske to how we do 
+
+In free space -> inspect element
+
+
+Elements -> isme puri html hogi , agr suppose hume koi button nhi milra kidr hai, toh 
+sabse 1 arrow hai , uspr click krege , aur jis bhi button pr lekr jaare hai 
+toh vo html me open hojega in browser
+agr button dekhna hai kidr hai toh button pr click kreget o vo direct udr hi pahunchua dega
+
+
+-> btton jidr hai Elements me uspr , right click krege toh hum apni class bhi add krskte hai 
+
+-> jis element ko select krege uski Css niche open hojegi
+
+-> nihce css me untick krege toh dekh skte hai ki usko remove krke kitna lgta hai
+
+->  color -> pr click kreke change bhi kar skte hai 
+
+-> agr size bdhana hai,  toh value pr click krege and arrow key se change kr skte hai 
+
+-> agr computer use kre hai toh ctrl + mouse wheel up krege toh size bdhega
+
+-> Agr suppose hover ka dekhege ki di bhi hai ya nahi, toh :hov diya hai 
+to vo sari active states dikha dega
+
+-> font family dekr dekh skte hai ki kesi lgri hai 
+*/

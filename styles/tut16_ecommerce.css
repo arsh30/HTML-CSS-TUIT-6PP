@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 4vmax;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.701);
+}
+
+.left {
+  /* border: 1px solid salmon; */
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.left > a {
+  text-decoration: none;
+  color: crimson;
+  font-size: 2vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mid {
+  /* border: 1px solid rgb(116, 114, 250); */
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: stretch;
+  /* or ya toh iski height bhi 3vmax krdo jitni nav ki hai ya toh ye stretch dedo */
+}
+
+.mid > a {
+  color: black;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4vmax;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.mid > a:hover {
+  border-bottom: 2px solid crimson;
+  color: crimson;
+}
+.right {
+  /* border: 1px solid rgb(250, 248, 114); */
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.right > img {
+  width: 2.5vmax;
+}
+
+.home {
+  /* border: 2px solid red; */
+  display: flex;
+  height: 90vh;
+  /* background-image: linear-gradient(
+    to right,
+    rgba(167, 212, 212, 0.73),
+    rgba(111, 111, 177, 0.753)
+  ); */
+  background-image: radial-gradient(rgb(230, 221, 255), rgb(184, 184, 223));
+  /* Jo pehle color hoga vo bhar ki trf hoga */
+}
+
+.container {
+  width: 100%;
+  /* height: 100%; */
+  border: 1px solid red;
+}
+
+#rightContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#rightContainer > img {
+  margin-right: 8vmax;
+  filter: drop-shadow(0 0 20px black);
+  /* ye image aas paas shadow dene ke liye di hai */
+}
+
+#leftContainer {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 2vmax;
+}

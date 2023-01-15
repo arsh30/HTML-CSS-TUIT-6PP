@@ -1,0 +1,205 @@
+/* 
+1st step ----> TRANSITION -> agr kisi cheez par hover krre hai, toh jo fatafat color
+change hota hai vo smooth tarike se hoga
+
+- parent ko dete hai; -> means jispr effect chaiye agr hover krege toh
+
+.box {
+  background-color: rgb(45, 45, 45);
+  height: 100px;
+  width: 100px;
+  font: 600 1.6rem cursive;
+  color: white;
+  margin: 2vmax;
+  transition-property: background-color; /* jispr property set krni hai , suppose backgroudn color hai, jo abhi change krre hai
+
+  transition-duration: 3s; /*Means jo background color hai, itni der baad change hoga */
+/* transition-timing-function: linear; -> By default jesa tha wesa hi hai */
+/* transition-timing-function: ease-in; -> ise transition jo hai, vo start hogi slowly 
+    and end hogi fast*/
+/* transition-timing-function: ease-out; -> transition start hogi fast speed se and end 
+  hogi ikdum slow */
+/* transition-timing-function: ease-in-out; -> isse start or end slow hoga*/
+/* transition-delay: 2s; --> isse hover krne ke baad 2s ke bad dikhayi degi 
+  transition*/
+
+/* NOTE-> YE UPR 4 PROP HOGYI, TRANSITION KE LIYE SO WE USE SHORTHAND PROPERTY 
+ transition: jispr_property_apply_krni_hai timing_kitni_Der_ke_liye_Dena_hai
+      and idr hi specify kr skte hai ki timing funtion kya hoa chaiye like
+      linear,
+    ease In and_idr hi delay bhi de skte hai Delay is kitni der baad chalana hai,
+    duration kitni der ke liye chalana hai; 
+
+ 
+/* transition: background-color 2s ease-in 1s, color 2s ease-out 1s; */
+/* note idr hi 2nd pr bhi de skte h property comma lgakr
+  Agr multiple cheezo ko yeh property deni hoti toh kya comma lga lga kr likhte
+  so Likhege all */
+
+/* transition: all 2s ease-in 1s; */
+/* transition: all 1s; -> by default timing function is LINEAR  
+
+  --------------------
+  NOW TRANSFORM -> Ye uspr dege jispr hover krege
+
+  .box:hover {
+  background-color: tomato;
+  color: blueviolet;
+  box-shadow: 10px 0 20px black;
+  /* x cordinate(+10 krege to right me giregi shadow && -10 krege to left me giregi 
+  shadow) y cordinate(+10 krege to down ki trf giregi shadow and -10 toh upr ki trf 
+  giregi shadow) 20px blur colorBlack */
+/* transform: skewX(-30deg);  -> Means ye tilt hojayega +30 to left side tilt and vice 
+  versa*/
+/* transform: skewY(30deg); */
+
+/* transform: skewX(30deg) skewY(30deg); */
+
+/* transform: translate(100px, 100px); */
+/* TRANSLATE -> means right move hojaega 100px jab cursor lekr jaege, 100px cordinate 
+  agr 1 parameter dege toh X ke liye hoga, agr 2 ke liye dege toh 2 ke liye hoga 
+  ahr - dege toh left ki trf jaega and  + pr rigth ki trf
+  Y coordinate me - dege to top ki trf jaega and  + me niche ki trf
+  */
+
+/* transform: scale(1.2, 2); */
+/* Scale basically jb hover kree tb uska size bda hojayega , by default x and Y 
+  direction dono me hota hai , [WIDTH-1ST PARAM, HEIGTH 2ND PARAM]*/
+
+/* transform: rotateX(90deg);
+  transform: rotateY(90deg);
+  transform: rotateZ(90deg); */
+/* Rotate -> basically rotate hojayega pura */
+
+/* SHORT HAND PROPERTY 
+  transform: scale(2) translate(20%, 40%);
+}
+
+/* -------------------------------------------------------------------------- /
+
+ANIMATION ---------------->
+1) How to make our animation 
+@keyframes myanimation (animation_Name) {
+from{ -> jo bhi properties from me likhege vo starting me hongi
+    backgroundColor:red; -> basically animation start hogi red color se
+}
+to{ -> jo bhi properties "to" me likhege vo ending me hongi
+    backgroundColor:green ; -> basically animation end hogi green color se
+}
+}
+
+
+#box1 {
+  /* USING ANIMATION */
+/* animation-name: myanimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+   //forward means jb animation puri hojaye toh "END pr hi reh jaye 
+  animation-iteration-count: infinite;
+  // animation count -> means 5 baar apne aap animation play hogi  */
+
+/* SHORTHAND PROPERTY OF ANIMATION */
+/* animation: animationName kitne_timeChalani_hai timing_function_kya_h 
+  delay_kitni_Rakhni_hai kitni_time_Chalani_h animation_direction */
+
+/* animation direction:alternate means from se start hui to pr end hui 
+    and again niche se upr and upr se niche
+
+  animation: myanimation 1s linear 1s infinite alternate;
+}
+
+@keyframes myanimation {
+  /* from {
+    background-color: red;
+  }
+  to {
+    background-color: goldenrod;
+  } 
+
+  0% {
+    background-color: red;
+    transform: scale(2);
+  }
+
+  50% {
+    border-radius: 100%;
+    /* 50% means size us animation ka 
+  }
+
+  100% {
+    background-color: red;
+    transform: scale(20);
+  }
+}
+
+
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  background-color: rgb(45, 45, 45);
+  height: 100px;
+  width: 100px;
+  font: 600 1.6rem cursive;
+  color: white;
+  margin: 2vmax;
+  transition: all 1s;
+}
+
+.box:hover {
+  background-color: tomato;
+  color: blueviolet;
+  box-shadow: 10px 0 20px black;
+
+  /* SHORT HAND PROPERTY */
+  /* transform: scale(2) translate(20%, 40%); */
+}
+
+#box1 {
+  /* USING ANIMATION */
+  /* animation-name: myanimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+   //forward means jb animation puri hojaye toh "END pr hi reh jaye 
+  animation-iteration-count: infinite;
+  // animation count -> means 5 baar apne aap animation play hogi  */
+
+  /* SHORTHAND PROPERTY OF ANIMATION */
+  /* animation: animationName kitne_timeChalani_hai timing_function_kya_h 
+  delay_kitni_Rakhni_hai kitni_time_Chalani_h animation_direction */
+
+  /* animation direction:alternate means from se start hui to pr end hui 
+    and again niche se upr and upr se niche
+  */
+  animation: myanimation 1s linear 1s infinite alternate;
+}
+
+@keyframes myanimation {
+  /* from {
+    background-color: red;
+  }
+  to {
+    background-color: goldenrod;
+  } */
+
+  0% {
+    background-color: red;
+    transform: scale(2);
+  }
+
+  50% {
+    border-radius: 100%;
+    /* 50% means size us animation ka */
+  }
+
+  100% {
+    background-color: red;
+    transform: scale(20);
+  }
+}

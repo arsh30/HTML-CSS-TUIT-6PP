@@ -1,0 +1,59 @@
+/* Responsive -> means device ke accoring apne size adjust krle khud se 
+means in mobile, tab, phone , so har device me same rhegi*/
+
+body {
+  background-color: peachpuff;
+}
+
+div {
+  background-color: brown;
+  width: 21vw;
+  /* we use relative unit taki responsive bnjaye ya to media query use krege
+  make sure krege ki vo 400px jitn aaaye */
+  height: 21vw;
+  margin: 50px;
+}
+
+/*
+to make responsve we use media-query
+
+- screen: means only for displaying on screen, best jo hai vo 
+- all: means sabke liye baat hori hai
+- and: means maximum width itni honi chaiye 0 se 600 tak hi honi chiaye 
+    toh hi iske andr ki properties use hongi
+
+- hum apni media query use krke layout change kr skte hai
+- isi media query me sab likh skte hai
+
+- So ye double double kaam hai ki pehle upr property do and fir niche 
+Yes -> so to make responsive we have 
+:flexbox, grid , or we can use responsive units 
+
+- relative units for responsive unitss
+- vw -> viewport of wdth -> means kitna screeen ka pixels hai 
+
+eg: abhi div ka size hai 400px width and height
+400(currwidth) % 1920(screeen width in pixels) divide isliye krre hai 
+taki dekh sake 400 percent kitna percent hai 1920 ka 
+jo value aayegi * 100 = 21 
+
+=> 21% of screen resolution ie 1920 ; 21vw, width ka jitna bhi resolution hai uska 21%
+
+
+=> TRY TO USE RESPONSIVE UNITS, FLEXBOX OR GRID, MEDIAQUERY [TRY TO AVOID THIS]
+
+=> Responsive unit -> %, rem, vw, vh, vmin, vmax
+*/
+/*
+@media all and (max-width: 1000px) {
+  body {
+    background-color: aqua;
+  }
+
+  div {
+    background-color: crimson;
+    width: 100px;
+    height: 100px;
+  }
+}
+*/

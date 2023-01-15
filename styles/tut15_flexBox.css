@@ -1,0 +1,106 @@
+/* 
+Flex box [PARENT KO DETE HAI] TAKI USKE ANDR KE CHILD SAHI HOJAYE -> koi bhi elem hai unki display inline hoti ya block 
+agr kisi elem ki display:flex krde toh vo flexContainer bn jata hai
+
+uske andr jo bhi cheeze aayegi vo ya toh row form me aayegi ya toh column form me aayegi 
+
+- X axis is main axis, [main start (-ve), main end (+ve on number line)]
+- Y axis is cross axis [ cross start (+ve upr ki trf) , cross end (-ve)]
+
+- Jo bhi cheeze hongi hai jisko flex bnaya hai uske andr vo : FLEX ITEMS hongi
+- Flex Item jo aayege vo ya toh row form me aayege ya toh column form me aayege
+  chahe vo inline ho, ya block ho, aayege row me hi coz default direction is ROW
+
+- FLEX CONTAINER PROPERTIES: To change the flex Items
+
+NOTE -> Justify content : For only MAIN AXIS OR X AXIS 
+
+1) justify content:center [means jo bhi andr items hai unki baat hori hai[ 
+                            vo sare center pr aajayege
+
+2)justify content:flex-start [means jo bhi flex container ki items hai vo START me aajege]
+
+3)justify content:flex-end [means jo bhi flex container ki items hai vo END me aajege]
+
+4)justify content: space around [means jo bhi flex container ki items hai, unka har ik 
+                                    item ka "MARGIN LEFT AND RIGHT " se equal hojata hai
+            OR    [ space around means equally ditributed Left and right Margin]
+
+5)justify content: space between [ means Har Item ki bheech me equally space aajega]
+                            [1st and last wale ko margin nhi hota 
+                            left and right respectively]
+
+                            [OR It Distributed the items equally]
+
+6)justify content: space evenly [means har item ke bheech me EQUALLY MARGIN AAYEGA bs 
+                                except 1st and last]
+
+                           OR Distribute items evenly Items have equal space around them
+
+7) justify content: stretch -> [Jitne items hai sare strecth hojaege upr se niche tak 
+                                bas condition hai ki heigth nhi honi chaiye]
+  
+---------------------------------------------------------
+ALIGN ITEM -> It is for Y AXIS , It is flex container
+
+1) align-item : center
+2) align-item : flex end
+3) align-item : flex start 
+4) align-item : stretch
+5) align-item : stretch
+
+
+-----------------------------------------------------------
+FLEX CONTAINER MORE PROPERTIES 
+
+1) flex-direction: row - bydefault
+2) flex-direction: column
+3) flex-direction: column-reverse [column me aayegi but in reverse order]
+4) flex-direction: row-reverse [row me rhegi but in reverse order]
+
+NOTE -> Flex direction column krne ke baad 
+align-item: is for X AXIS
+justfy-item is for Y AXIS
+
+5) flex-wrap:wrap [jo size dia hai humne har box ka same rhega , agr chota hoega
+                  to next line se start hojega]
+
+6) align-content:center [ise vo center me hi rhega]
+-----------------------------------------------------------
+
+FOR FLEX ITEM PROPERTIES ->  Means jo andr item hai unke liye properties
+
+1) align-self: flex-end 
+2) align-self: center
+3) align-self: center [Baki andr properties are sam flex end , flex start, steretch]
+4) flex-grow:2 
+5) flex-shrink:2 [means 2 time jldi shrink hoga as compared to others]
+
+
+-------------------------------------------------
+SHORT HAND PROPERTY 
+
+1) flex-flow: row-reverse wrap; [reverse bhi hogyi and wrap bhi hogyi]
+
+*/
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  font-size: x-large;
+  margin: 2px;
+}
+
+/* 1) We know ki div ki display block element hoti hai */
+
+body {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  border: 2px solid green;
+}
+
+/* 2)  Jo item the jo div the , vo sare 1 hi row me aayege coz vo default direction hai
+       joki phle entire row lere the  
+*/

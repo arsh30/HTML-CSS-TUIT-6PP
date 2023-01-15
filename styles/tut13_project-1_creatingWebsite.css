@@ -1,0 +1,125 @@
+/*Website is for making modeling agency */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./proj1_bg.webp");
+  height: 110vh;
+}
+
+header {
+  /* border: 2px solid white; */
+  padding: 20px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  position: sticky;
+  top: 0%;
+}
+
+.logoBox {
+  /* border: 1px solid green; */
+  display: inline-block;
+  width: 150px;
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.logoBox:hover {
+  color: salmon;
+}
+
+.navBox {
+  /* border: 1px solid orangered; */
+  width: 600px;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  /* right se 20 px dur hoje */
+}
+
+.navBox > a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 20px;
+  transition: all 0.5s;
+}
+
+.navBox > a:hover {
+  color: salmon;
+}
+
+#homie {
+  color: salmon;
+}
+
+.heading {
+  /* border: 2px solid red; */
+  color: salmon;
+  font-size: 80px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: relative;
+  top: 60px;
+  left: 70px;
+  width: 500px;
+}
+
+.heading + h3 {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* border: 2px solid white; */
+  font-size: 40px;
+  position: relative;
+  top: 60px;
+  left: 80px;
+  width: 500px;
+}
+
+.heading + h3 + p {
+  /* border: 2px sold white; */
+  color: white;
+  font-family: "Roboto";
+  font-style: italic;
+  position: relative;
+  width: 400px;
+  word-spacing: 4px;
+  top: 60px;
+  left: 80px;
+}
+
+.btn {
+  margin-top: 100px;
+  width: 150px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  background-color: salmon;
+  color: white;
+  font-family: "Roboto";
+  border-radius: 10px;
+  position: relative;
+  left: 80px;
+  top: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  border: 1px solid salmon;
+}
+
+.btn:hover {
+  background-color: rgb(240, 240, 240, 0);
+  color: white;
+}
+
+footer {
+  color: white;
+  border: 1px solid white;
+  position: fixed;
+  bottom: 0;
+  font-family: "Roboto";
+}

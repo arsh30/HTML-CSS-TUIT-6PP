@@ -1,0 +1,215 @@
+/*
+- flex box -> isme direction define kr skte hai eg: row me chaiye ya column     
+        Jo element hai vo row me chaiye sare Ya column me chaiye sare vo define kr skte 
+        hai because vo 1D hota hai.
+
+- css grid -> It is 2d. hm isme rows and column alag se define kr skte hai , hum 
+              specifically bta skte hai ki number 4 ka div first row me 4th column me 
+              hona chaiye Number 5 ka div 1st column or 2nd row me hona chaiye, yeh sab 
+              kar skte hai css grid se
+              is hisab se puri cheeze specificlly bta skte hai 
+
+--------------------------------------------------------
+
+1) -> parent ko display:grid denge 
+   -> ab jab property denge: grid template-columns: 100px 
+                            - means jo hmari grid layout usme sare columns 100px ke 
+                            divide krdiye columns 100px ke 
+                            ,so abhi 1 column hai 100px ka
+
+   -> ab jab property denge: grid template-columns: 100px 100px 
+        - ab 2 bar 100 100 diye iska mtlb hai, means 2 column bant jaege 1st column 100px 
+        ka and 2nd column bhi 100px ka, so 100 100 se 2 baar divide hogya
+
+    -> grid template-column: 100px 100px 100px 
+                - so isse 3 column me divide hojega 100px each 
+                - means 3 column aajege
+    
+    -> grid template-columns: 100px 200px 100px 
+                        - jo center wala column hoga vo 200 px ka hojega 
+                        width uss pixel ki
+
+    -------------------------------------------
+    %
+    -> grid template-columns:30% 30% 30% -> puri width ka 30 percent
+
+-> Agr margin add krna hai to we have -> 
+    -> grid-gap: 10px -> but yeh overflow bhi ho skta hai kyuki margin lera ai vo 
+
+-> NOTE -> Instead of percent use "FRACTION UNIT" 
+    grid template-columns: 1fr 1fr 1fr
+     [means 1 1 ke fraction / ratio  me divide hojege]
+
+     so isse Overflow hat jaega 
+     ye grid gap ke bad 20 pixels -> total width se minus krlo  jitna bachega vo equal 
+     distribute dedega
+
+     1fr = 10percent or 4fr = 40%
+
+     [Note -> 1fr is 100% of available space 
+              2fr is 50% each, so 1fr is 1/2 of available space
+
+-> grid-tempalte-columsn: 100px 100px 100px -> ise 3 cells create hogni puri row me 
+                                               100 px each 
+
+OR WE CAN WRITE INTO ANOTHER WAY 
+
+-> grid-template-columns: repeat(3,100px) -> same effect aayega isse bhi,
+                                            3 column divide honge 100px ke
+
+->  grid-template-columns: repeat(3,1fr) 
+
+->  grid-template-columns: repeat(auto-fill, 100px) -> autofill se hua hai ki utni baar
+                                       repeat hoga jitne aa skte hai 
+                                       agr 100px ke 6 block hai toh hmare screen 
+                                       resolution se chota hai toh sare aajege
+
+-> to make responsive use this 
+    : grid-template-columns: repeat(auto-fill, 30% or 30vw) not work, used below
+
+
+-> USE THIS TO MAKE RESPONSIVE -> 
+     : grid-template-columns: repeat(auto-fill, minmax (400px, 1fr) ) 
+      [means minimum 400px toh ho hi, rest space bant do max min 1fr me 
+
+
+-> if we give this 
+      : grid-template-columns: 300px  minmax (400px, 1fr) 
+      [so 1st wala column 300px ka and 2nd wala try krega ki minimum 400px toh rhe and 
+      jyda ho ske toh, jitna maximum ho ske, rest space utna lega
+      [agr space kam jyda krege toh 400 px se kam nahi hoegi] 
+
+---------------------------------------------------------------------------------------
+TO SET ROWS: 
+
+2) parent ko property denge basically grid container ko 
+    -> grid-template-rows: 100px 200px 300px 
+                        [means 1st row ka size 100px, 2nd row 200px ki 3rd row 300px ki]
+
+    -> grid-auto-rows:200px; [jitni rows hongi vo sari 200px ki hojegi,
+       but ye new kese hai, ye toh grid-template-row se bhi hojata
+       eg: grid-template-rows: 200px 200px 200px -> toh teeno row 200px ki hojegi
+
+       ::-> agr ye property denge, grid-template-rows: 200px 300px [toh first 2 rows pr 
+            impact dalegi] AND Agr hum sath hi 
+            ye property denge
+            grid-auto-rows:200px; [toh jitni bhi rows bchegi, jinko humne specify nahi   
+            kiya vo sari 200px ki hojaegi]
+
+--------------------------------------------------------------
+
+3) parent ko property denge basically grid container ko 
+ 
+eg: display:grid
+   grid-template-columns:repeat(4,1fr); -> 4 column divide honge 1fr me jitne aa paye
+   grid-gap:10px -> ye margin add krega 10px but ye overflow bhi ho skta hai, coz margin 
+                    lera hai, so instead use fraction unit, 1fr = 10%
+
+
+    grid-auto-flow:column; -> ye bhi dena necessary hai, taki Niche wali property apply 
+    hojaye, MAIN IS PROPERTY SE SARE COLUMN 1 ROW ME AAYEGE, isliye upr size diya hai 
+    taki vo size lele
+                    
+    grid-auto-columns:100px; -> isse sari 1rows me aajege sare columns, 4 column aayege 
+    1fr ke, coz upr proeprty di hai, or jitni space bchi hai or jitne column bche hai, vo
+    1 column me ajege, by default row hota hai, or jo aayge vo 100px ke hai, 
+    agr ye Na dete to jitni space bchti usi me divide hojate
+
+    -----------------------
+
+    grid-auto-flow:row; -> jo bhi new row aayegi, agr size na hua to next row mee aayegi
+    grid-auto-rows: 200px -> isse jo bhi row next row me aayegi uska size 200px hoga
+
+-------------------------------------------------------------
+
+HOW TO MAKE HEADER
+
+#header {
+grid-column-start: 1 -> means 1st col se start hona hai 1 cell ko
+grid-column-end: 5 -> means puri row jitna 1 cell bngya
+}
+
+#section1 {
+    grid-column-start:1 
+    grid-column-end:4
+    grid-row-start:2
+    grid-row-end:5
+}
+
+#sidebar {
+grid-row-start:2
+grid-row-end:5
+}
+
+-----------------------------------------------------------------
+
+SHORT HAND PROEPRTY
+
+1) grid-column: 4 / 5; -> 4 se start hokr 5th column [basicallly grid-row start: 4, 
+                                                     grid row end -> 5] 
+
+2) grid-row: 6 / 7; -> means grid-row-start: is 6, and 7 tak aani chaiye 
+                             
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(37, 37, 37);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-template-rows: 100px;
+  grid-auto-rows: 100px;
+}
+
+/* MAKING NAVBAR USING GRID AND FLEXBOX */
+#header {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: blue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#header > a {
+  color: white;
+  text-decoration: none;
+}
+
+.box {
+  background-color: rgb(0, 132, 235);
+  font: 100 2rem cursive;
+  color: white;
+  /* border: 1px solid red; */
+}
+
+#section {
+  grid-column: 1/4;
+  grid-row: 2/5;
+  background-color: whitesmoke;
+  display: grid;
+  /*justify-items: center;*/ /*grid property */
+  /*align-items: center;*/ /*grid property */
+  /*place-items: center;*/ /*grid property */
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.tiny {
+  background-color: orangered;
+  border: 1px solid purple;
+  height: 100px;
+  width: 100px;
+}
+
+.tiny2 {
+  place-self: center;
+}
+
+.tiny3 {
+  justify-self: center;
+  align-self: center;
+}

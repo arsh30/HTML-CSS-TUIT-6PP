@@ -1,0 +1,102 @@
+/*
+1) Float -> it specifies how an element should float, It is used for formatting and 
+positing the content
+
+2) Float property can have one of the following values
+    left -> the element float to the left corner
+    right -> the element float to the right corner
+    none -> the element does not float
+    inherit -> the element inherit the float value of its parent
+
+[Note -> jisko bhi flaot property denge , toh vo AIR me udhne lagjayega
+or usko kahin bhi bhj skte hai]
+
+PART 1 ---------------->
+  <style>
+    body {
+      border: 1px solid black;
+    }
+    div {
+      height: 100px;
+      width: 100px;
+    }
+    #first {
+      background-color: red;
+    }
+    #second {
+      background-color: aqua;
+      float: right;
+      1) we want ki 2nd wala right me move hoje 
+      2) so ye air me float krega jisse niche wala element upr aajega 
+      3) so jo 2nd wala div hai vo air me float krega, jisse 3rd wala bhi puri row cover 
+      krlega, but yeh apne container me nahi hai ab, ye air me hai
+
+    }
+    #third {
+      background-color: yellowgreen;
+    }
+  </style>
+  <body>
+    <div id="first">1</div>
+    <div id="second">2</div>
+    <div id="third">3</div>
+  </body>
+-------------------------------------
+
+PART 2->   <style>
+    body {
+      border: 1px solid black;
+    }
+    div {
+      height: 100px;
+      width: 100px;
+    }
+    #first {
+      background-color: red;
+      float: left;
+    }
+    #second {
+      background-color: aqua;
+      clear: left;
+      float: left;
+      /* so now hum chahte hai, ki first wala element float bhi krta rhe
+      and 2nd wale ke upr koi effect bhi na pdhe
+      toh jispr effect nahi dena , we give property to that element: 
+      clear:left; // means humne 2nd wale ko btadiya ki flaot property tere upr
+      jbr dsti lgegi, vo left side se aayegi property
+      basically clear jo hai, 
+      "display: IMP : ;apne upr wale ko dekhta hai, agr uspr koi proeprty lgi hai,
+      toh usko clear krdo
+
+    }
+    #third {
+      float: right;
+      background-color: yellowgreen;
+    }
+  </style>
+  <body>
+    <div id="first">1</div>
+    <div id="second">2</div>
+    <div id="third">3</div>
+  </body>
+------------------------------------------------------------
+PART 3 -> DISPLAY PROPERTY
+
+display -> inline -> inline element hojega jo block tha
+display -> block -> block level bn jaega
+display -> inline-block -> means we can apply both properties
+
+-----------------------------------------------------------
+
+POSIITON PROPERTIES 
+
+position : static which is default
+relative -> It is relative to its normal position
+absolute -> It is relative to its parent posiiton
+sticky -> means ye udr hi fixed hojega hilega nahi
+fixed -> means ye iss jgh fixed hogya ye move nahi hoga, use tb kreege jb jyda tar chat bot banna ho
+
+[Note -> jb hum relative ya abslute dege toh top bottom left rigth se bhi dena pdhega]
+
+
+*/
