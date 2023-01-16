@@ -1,0 +1,88 @@
+/* 
+p {
+    color: aqua;
+}
+
+1) Agr sirf krna ho first paragraph ko hi 
+
+p::first-line {
+    Jitne bhi paragraph tags honge un sbkii first line ka color change hojaega
+  color: aqua;
+}
+
+p::first-letter{
+    Jitne bhi P tag ke andr first letter honge sabka color change hojega
+    This is called pseudo selector
+    color: red;
+}
+
+::first-line{
+    Agr simple :: ise likhege toh sabke upr apply hojaega
+    color: blue;
+}
+
+NOTE -> Agr kisi par jbr dsti property apply krni hai to we can write 
+property ke aage [!important]
+
+2) Important pseudo Elements 
+
+suppose har ik paragraph ke pehle Line deni hai Ik 
+
+p::before {
+  content: "Nice";
+  Nice add Hojega har ik P tag ke pehle, and by default iski display Inline hoti hai
+  isliye pehle aata hai 
+  background-color: aqua;
+  // background:alpha -> Jo content add kra hai uska color hoga 
+
+  display: block;
+  so ye sari jo properies hai vo CONTENT pr add hoti hai 
+
+  position: absolute;
+  top: 0%;
+  width: 100vw;
+  height: 50vh;
+
+  z-index: -1;
+  z index means z index me piche hojaye thoda dur hojaye
+  opacity: 0.1;
+  opacity kam krege toh background me kuch dikhega
+
+  NOTE -> YE TAB USE KRTE HAI , JB BACKGROUND ME KUCH IMAGE LGANI HO
+  TOH BEFORE TAB USE HOTA HAI JYDA TAR
+
+  Doubt -> opacity isme kam kyu kri hai, vrna krne ko body tag ko bhi dedete image and 
+  uski opacity kam krdete, but usse hota ki uske andr ka jo content hai uski opacity kam 
+  hojati
+
+  but abhi hora hai ki jo background hai before wala usi ki opacity kam hui hai
+  andr ka Jo bhi content tha vo vese ka vese hai
+ 
+}
+
+p::after {
+  content: "nice after";
+  
+  1) Ye b tag ke baad me likha aajega jo bhi likhege and by default 
+  jo content hai uski display inline hai
+
+  2) And baki properties same hai as above
+ 
+}
+
+-----------------------------------------------
+
+3) pseudo elements -> Input Tag par apply hoti h
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: 1px solid red;
+}
+
+/* Now ques is isko style kese krege idr se toh file upload krte hai */

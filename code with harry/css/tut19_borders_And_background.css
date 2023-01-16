@@ -1,0 +1,53 @@
+#firstpara {
+  background-color: red;
+  height: 100px;
+  width: 455px;
+
+  /* Border */
+  /* border-width: 20px;
+  border-style: solid;
+  border-color: greenyellow; */
+  border-radius: 30px;
+
+  /* SHORT HAND PROPERTY  -> width,style,color*/
+  border: 2px solid green;
+}
+
+/* Agr 1 side border dena ho */
+
+#secondpara {
+  background-color: rgb(44, 161, 79);
+  height: 100px;
+  width: 455px;
+  border-top: 4px solid rgb(236, 133, 150);
+  border-bottom: 4px solid rgb(115, 91, 201);
+  border-right: 4px solid rgb(98, 13, 13);
+  border-left: 4px solid rgb(10, 106, 92);
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 60px;
+}
+
+#thirdpara {
+  border: 2px solid red;
+  height: 1100px;
+  width: 455px;
+  /* background-image: url("../sudarshan-bhat-LSaBcEOw2MI-unsplash.jpg"); */
+  /* background-repeat: repeat-x; -> sirf x axis me repeat hoegi */
+  /* background-repeat: repeat-y; -> sirf y axis me repeat hoegi*/
+  background-repeat: no-repeat; /* -> sirf 1 baar chaiye repeat nahi honi chaiye */
+
+  /* background-position: center top; /* x axis me center hojegi, y axis me top pr aajegi 
+  pixels me bhi de skte hai*/
+
+  /* background-position: center center; */
+  /* background-position: center right;  */
+  /* jo first wlaa hai -> vo top bototm center
+  second wale left,right,center */
+
+  /* SHORTHAND PROPERTY: url, repeat , position */
+  background: url("../sudarshan-bhat-LSaBcEOw2MI-unsplash.jpg") no-repeat
+    center/cover;
+}

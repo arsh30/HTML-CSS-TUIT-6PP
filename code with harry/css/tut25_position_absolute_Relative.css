@@ -1,0 +1,67 @@
+/*
+POSITION PROPERTY -> static(bydefault, relative, absolute ,fixed, sticky)
+
+NOTE -> Inline element ki height and width set nahi kar skte 
+
+1) position: static; -> by default yehi hoti hai, koi effect nahi aayega
+2) position: relative ->  Jb humne yeh krdiya toh hum top, bottom, left, right properties 
+    use kar skte hai
+    TOP:30px 
+
+    - Relative -> It is relative to its normal position, means apni original position se 
+      move hoega,
+    - "agr humko purani position (orignal position) me gap chaiye toh hum use krege 
+       relative" and " agr humko purani Position par gap NAHI CHAIYE TOh we use ABSOLUTE"
+--------------------------------------------------
+3) position absolute ->  Jb humne yeh krdiya toh hum top, bottom, left, right properties 
+                         use kar skte hai
+top:30px;
+left40px; // 40px dur hojega left se 
+
+- position absolute -> absolute -> means relative to the parent
+ Eg: talking about below example: parent se top se 30px and parent se left se 30px 
+ dur hojega ie container
+
+ -----------------------------------------------
+
+ 4) Sticky: -> if we want ki scroll kre toh navbar upr ka upr chipka hi rhe, tb hum sticky 
+                used krege
+
+5) Fixed -> tab use krege jb hum chahte hai ki scroll kre toh fixed rhe ik jagah box
+
+
+*/
+.box {
+  border: 2px solid red;
+  width: 150px;
+  height: 150px;
+  margin: 2px;
+  display: inline-block;
+}
+
+.container {
+  border: 1px solid black;
+  background-color: khaki;
+  height: 3444px;
+}
+
+#box3 {
+  /* 1) position: static; */
+  /* 2) position: relative; -> relative to its normal position and will leave a gap at 
+                              its original position
+  */
+
+  /* 3) asbolute: relative to the position of its first parent(container)   */
+
+  /* 4) fixed ->  relative to the browser window
+   -> means jb hum scroll kre toh vo ik jagah fixed rhega move nahi hoega
+     mostly used in chat bot */
+
+  /* position: fixed;
+  right: 4px;
+  bottom: 2px; */
+
+  /* 5) sticky -> jb bnda scroll krra hai, to hum chahte hai ki vo upr hi rhe */
+  position: sticky;
+  top: 3px;
+}

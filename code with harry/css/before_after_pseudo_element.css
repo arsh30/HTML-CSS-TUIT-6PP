@@ -1,0 +1,85 @@
+section {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  height: 344px;
+  margin: 3px 23px;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation {
+  display: flex;
+  font-size: 1.3rem;
+  font-family: cursive;
+}
+
+li {
+  /* border: 1px solid red; */
+  list-style: none;
+  padding: 20px 23px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  text-align: center;
+}
+
+/* 
+BEFORE AND AFTER PSEUDO SELECTOR
+
+1) section::before {
+  content: "this is arsh"; -> jo bhi section tag hai usme pehle ye likha aajega by default inline element hota
+   hai, and Agr after use krte toh baad me likha ajata , section ke baad
+}
+
+---------------------
+
+2) But pseudo selecor aise use nahi krege, ye tb use krte h jab
+
+suppose backgroudn image lgayege -> from source.unsplash.com -> ye ik url deti hai jispr 
+images aati hai randomly
+
+-> jo text hai background image lgane se khrab krdiya hai text ko, pdha nahi jara ,
+so 1 solution is ki opaciy kam krde, toh body ki krege toh sabki opacity kam hojegi
+so kya hum aise kre ki opacity bhi kam na ho, image bhi background me set hojaye or sab 
+ache se hojaye
+
+-> so jo Header hai isse pehle ik content insert krege or uske andr background image 
+lgadege, position absolute krdege and heigth and width set krdege 
+
+*/
+
+/* section::before {
+  content: "this is arsh";
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: whitesmoke;
+}
+
+header::before {
+  content: "";
+  background: url("../sudarshan-bhat-LSaBcEOw2MI-unsplash.jpg") no-repeat
+    center/cover;
+
+  /*wo upr ki 2 properties se nahi hua, so hme position:Absolute krege
+    and height and widh set krege taki visible ho  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  /* content upr ki 2 property se dhak gya hai, so z-index set krege
+  and opacity set krege */
+
+  z-index: -1;
+  opacity: 0.1;
+}
